@@ -1,0 +1,29 @@
+spring:
+  datasource:
+    username: root
+    password: itcast
+    url: jdbc:mysql://localhost:3306/master_music?useSSL=false&useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&autoReconnect=true&failOverReadOnly=false&maxReconnects=10
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource #alibaba连接池
+    druid:
+      initial-size: 5 #初始化建立5条连接
+      max-active: 20 #最多二十条
+      min-idle: 5 #最小连接数量
+      max-wait: 60000 #获取连接时最大等待时间
+  jackson:
+      date-format: yyyy-MM-dd HH:mm:ss
+#  profiles:
+#    active: dev
+
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+
+server:
+  port: 8888
+
+
+
+
+
+
